@@ -76,11 +76,25 @@ topTen.sort(function(a, b) {
 
 
 
-  $(document).ready({
+  $(document).ready(function(){
 
 
 
+$("#topten tbody");
+for(var i=0; i<topTen.length; i++){
+    $("#topten tbody").append("<tr>");
+      $("#topten tbody").append( "<td>" + topTen[i].full_name + "</td>" );
+        $("#topten tbody").append( "<td>" + topTen[i].score + "</td>" );
+        $("#topten tbody").append( "<td>" + topTen[i].date + "</td>" );
+      $("#topten tbody").append("</tr>");
+
+  
 
 
+  
+ 
+
+}
+  
 
   });
