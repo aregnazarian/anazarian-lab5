@@ -1,0 +1,17 @@
+html, body{
+  width: 100%;
+  height: 100%;
+    background-color: #e74c3c;
+    text-align: center;
+}
+
+
+
+section td{
+  color: white;
+}
+
+section {
+  width: 30%;
+  margin: 0 auto;
+}

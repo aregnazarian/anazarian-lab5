@@ -79,22 +79,14 @@ topTen.sort(function(a, b) {
   $(document).ready(function(){
 
 
-
-$("#topten tbody");
+console.log(topTen.length);
 for(var i=0; i<topTen.length; i++){
-    $("#topten tbody").append("<tr>");
-      $("#topten tbody").append( "<td>" + topTen[i].full_name + "</td>" );
-        $("#topten tbody").append( "<td>" + topTen[i].score + "</td>" );
-        $("#topten tbody").append( "<td>" + topTen[i].date + "</td>" );
-      $("#topten tbody").append("</tr>");
+      $("#topten  ").append( "  <tr> <td>" + topTen[i].full_name +"</td> <td>"
+       + topTen[i].score + "</td> <td>" + topTen[i].date + "</td> </tr>" );
+    //  $("#topten tbody").append("</tr>"
 
-  
-
-
-  
- 
 
 }
-  
+
 
   });

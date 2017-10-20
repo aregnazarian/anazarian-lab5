@@ -1,0 +1,18 @@
+html, body{
+  background-color: #2ecc71;
+
+  font-size: 25px;
+
+}
+
+
+section{
+  margin: 0 auto;
+  width: 20%;
+  height:50%;
+
+}
+
+section ol li{
+  cursor: pointer;
+}
