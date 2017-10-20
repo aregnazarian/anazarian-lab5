@@ -1,8 +1,52 @@
+var audio = new Audio('/public/music/song.mp3');
+function toggleSound() {
+	var currentSound = sessionStorage.getItem('soundStatus');
+	if(currentSound == "true") {
+		currentSound = "false";
+	}
+	else {
+		currentSound = "true";
+	}
+	sessionStorage.setItem('soundStatus', currentSound)
+
+    var myElement = document.getElementById("soundMenuItem");
+    myElement.innerHTML = "Turn Sound " + (currentSound ? "Off" : "On &nbsp;&nbsp;");
+
+	//(window["isSoundOn"]) ? isSoundOn = true : isSoundOn = false;
+	checkSound();
+
+}
+
+
+
+
+function checkSound() {
+
+	var currentSound = sessionStorage.getItem('soundStatus');
+
+	if (currentSound == "true") {
+		// start music
+		audio.play();
+	} else {
+	    // Stop the music
+	    audio.pause();
+	}
+
+}
+
+
+
+
+
 $(document).ready(function(){
-  var audio = new Audio('song.mp3');
+
+  checkSound();
 
 
-audio.play();
+  $("#soundMenuItem").click(function(){
+    toggleSound();
+
+  });
 
 $("#game").click(function(){
   window.location.href ="/game";
